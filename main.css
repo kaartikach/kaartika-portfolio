@@ -1,0 +1,380 @@
+/* General Styles */
+
+body {
+    font-family: 'Geist', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0f52ba;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #042c6a;
+    padding: 10px 20px;
+    color: #f3cbd4;
+}
+
+.nav-button {
+    background: transparent;
+    border: 2px solid #f3cbd4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'rainyhearts';
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-button:hover {
+    background: #f3cbd4;
+    transform: scale(1.05);
+}
+
+.logo {
+    color: #f3cbd4;
+    text-decoration: none;
+    font-weight: light;
+    font-size: 24px;
+    font-family: 'the bubble letters'
+}
+
+.popup-toggle {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.popup-toggle:checked + .popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 11;
+}
+
+.popup-close:hover {
+    color: #007BFF;
+}
+
+.info-popup, .contact-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 12; 
+}
+
+.popup:hover {
+    transform: scale(1.02);
+}
+
+.popup-image {
+    width: 75%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.popup-title {
+    font-family: 'rainyhearts';
+    color:#0f52ba;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.popup-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.popup-paragraph b i {
+    color: #f3cbd4;
+}
+
+.contact-popup {
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.popup:hover {
+    transform: scale(1.02);
+}
+
+.contact-title {
+    font-family: 'rainyhearts';
+    color:#0f52ba;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-popup ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-popup li {
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+.contact-popup a {
+    margin: 10px 0;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'rainyhearts';
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.contact-popup a:hover {
+    background-color: #0f52ba;
+    color: #f3cbd4;
+}
+
+/* Basic styling */
+.main-content {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: #f3cbd4;
+    font-family: 'Geist', bold;
+    z-index: 1;
+}
+
+.name {
+    font-size: 76px; /* Larger font size */
+    line-height: 1.2;
+}
+
+.interactive-text {
+    color: #f3cbd4;
+    font-family: 'Geist', bold;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for Kaartika Chitturi */
+#name:hover {
+    color: #fc6bb1; /* Tomato color */
+    font-family: 'the bubble letters'; /* Change font */
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Hover effect for Designer */
+#designer:hover {
+    color: #3bd63b; /* LimeGreen color */
+    font-family: 'the bubble letters';
+    text-shadow: 2px 2px #FF1493; /* Pink shadow */
+    animation: bounce 0.5s ease-in-out;
+}
+
+/* Hover effect for Storyteller */
+#storyteller:hover {
+    color: #007BFF; /* DodgerBlue color */
+    font-family: 'the bubble letters';
+    background: #ffff04; /* Yellow background */
+    padding: 5px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    animation: pulse 0.8s infinite;
+}
+
+/* Hover effect for Funky Socks */
+#socks:hover {
+    color: #ad5afb; /* BlueViolet color */
+    font-family: 'the bubble letters';
+    letter-spacing: 2px; /* Increase letter spacing */
+    transform: skewX(10deg); /* Skew effect */
+    animation: rotate 0.8s ease-in-out;
+}
+
+/* Underline animation (general for all) */
+.interactive-text::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007BFF;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.interactive-text:hover::after {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Selected Works Section Styling */
+.selected-works {
+    padding: 40px;
+    color: #f3cbd4;
+    font-family: 'Geist', bold;
+    background: #0f52ba;
+    text-align: center; /* Center-align the main content */
+    position: relative;
+}
+
+/* Header Styling */
+.works-header {
+    margin-bottom: 40px;
+}
+
+.works-header span {
+    font-size: 36px;
+    font-family: 'the Bubble Letters', sans-serif; /* Corrected font family */
+    text-align: center;
+    display: inline-block;
+    animation: textReveal 2s ease-out forwards;
+}
+
+/* Text Reveal Animation */
+@keyframes textReveal {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Grid Layout Styling */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for better responsiveness */
+    gap: 30px; /* Increased gap between items */
+    justify-content: center; /* Center the grid items */
+    position: relative;
+}
+
+/* Work Item Styling */
+.work-item {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Rainyhearts', sans-serif; /* Corrected font family */
+    background: #053b8d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content inside each work item */
+    padding: 15px;
+    opacity: 0; /* Initially hidden for fade-in effect */
+    transform: translateY(50px); /* Initially positioned below */
+    animation: fadeInUp 1s ease-out forwards; /* Apply the animation */
+
+}
+
+/* Fade-in and Slide-up Effect on Scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Trigger Animation on Scroll */
+.work-item:nth-of-type(odd) {
+    animation-delay: 0.2s; /* Stagger animations */
+}
+.work-item:nth-of-type(even) {
+    animation-delay: 0.4s; /* Stagger animations */
+}
+
+/* Image Styling */
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid rgba(243, 203, 212, 0.8); /* Transparent border */
+    transition: opacity 0.3s ease; /* Fade effect */
+}
+
+
+.work-item:hover img {
+    opacity: 0.8; /* Slight fade effect on hover */
+}
+
+.work-item span {
+    display: block;
+    padding: 10px 0;
+    color: #f3cbd4;
+    font-size: 30px;
+    background: #053b8d;
+}
+
+
